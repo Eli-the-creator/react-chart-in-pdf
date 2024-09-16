@@ -1,0 +1,94 @@
+{
+	"$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+	"css": {
+		"formatter": {
+			"quoteStyle": "single"
+		},
+		"parser": {
+			"cssModules": true
+		}
+	},
+	"files": {
+		"ignore": ["dist"]
+	},
+	"formatter": {
+		"enabled": true
+	},
+	"javascript": {
+		"formatter": {
+			"jsxQuoteStyle": "single",
+			"quoteStyle": "single"
+		}
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"recommended": true,
+			"a11y": {
+				"noAutofocus": "off",
+				"useSemanticElements": "off"
+			},
+			"complexity": {
+				"useDateNow": "error",
+				"noUselessStringConcat": "error",
+				"noUselessUndefinedInitialization": "error",
+				"noVoid": "error"
+			},
+			"correctness": {
+				"noConstantMathMinMaxClamp": "error",
+				"noUndeclaredDependencies": "off",
+				"noUnusedFunctionParameters": "error",
+				"noUnusedImports": "error",
+				"noUnusedPrivateClassMembers": "error",
+				"noUnusedVariables": "error",
+				"useHookAtTopLevel": "error"
+			},
+			"nursery": {
+				"noDuplicateCustomProperties": "error",
+				"noEnum": "error",
+				"noExportedImports": "error",
+				"noIrregularWhitespace": "error",
+				"noUnknownPseudoElement": "error",
+				"noUselessEscapeInRegex": "error",
+				"useDeprecatedReason": "error",
+				"useSortedClasses": "error"
+			},
+			"performance": {
+				"noBarrelFile": "warn",
+				"useTopLevelRegex": "error"
+			},
+			"style": {
+				"noDoneCallback": "error",
+				"noNamespaceImport": "error",
+				"noYodaExpression": "error",
+				"useCollapsedElseIf": "error",
+				"useConsistentArrayType": {
+					"level": "error",
+					"options": {
+						"syntax": "generic"
+					}
+				},
+				"useConsistentBuiltinInstantiation": "error",
+				"useShorthandAssign": "error",
+				"useThrowNewError": "error",
+				"useThrowOnlyError": "error"
+			},
+			"suspicious": {
+				"useAwait": "error",
+				"noConsole": {
+					"level": "error",
+					"options": {
+						"allow": ["error", "warn", "info", "debug"]
+					}
+				},
+				"useErrorMessage": "error",
+				"noEmptyBlockStatements": "error",
+				"noMisplacedAssertion": "error",
+				"useNumberToFixedDigitsArgument": "error"
+			}
+		}
+	},
+	"organizeImports": {
+		"enabled": true
+	}
+}
